@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: developer-cluster-1
+  annotations:
+    kubernetes.io/api-server: 'https://10.16.0.129:6443'
+    kubernetes.io/auth-provider: 'serviceAccount'
+    # Note: You'll still need to provide the token/CA via config or secret
+spec:
+  type: kubernetes-cluster
+  owner: guest
